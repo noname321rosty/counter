@@ -1,3 +1,5 @@
 # start counter 
-npm start
+/counter ,
+npm install ,
+npm start .
 
