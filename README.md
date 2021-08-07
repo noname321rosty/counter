@@ -1,2 +1,1 @@
-#start counter
 npm start
