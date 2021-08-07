@@ -2,18 +2,37 @@ import React from 'react';
 import './Counter.css';
 
 class Counter extends React.Component {
-	state = {count: 0};
+	state = {
+		count: 0,
+		step: 1,
+		max: 10,
+		min: -10,
+	};
 
 	increment = () => {
-		this.setState({
-			count: this.state.count + 1
-		});
+		const max = this.state.max;
+		const step = this.state.step;
+
+		if (this.state.count >= max) {
+			alert(`count > ${max}`);
+		} else {
+			this.setState({
+				count: this.state.count + step
+			});
+		}
 	}
 
 	decrement = () => {
-		this.setState({
-			count: this.state.count - 1
-		});
+		const min = this.state.min;
+		const step = this.state.step;
+
+		if (this.state.count <= min) {
+			alert(`count < ${min}`);
+		} else {
+			this.setState({
+				count: this.state.count - step
+			});
+		}
 	}
 
 	render() {
